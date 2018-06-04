@@ -14,6 +14,7 @@ public class Script1 {
     public void adminPanelOpen() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\IdeaProjects\\QATESTLAB\\src\\main\\resources\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+
         driver.get("http://prestashop-automation.qatestlab.com.ua/admin147ajyvk0/");
         driver.findElement(By.id("email")).sendKeys("webinar.test@gmail.com");
         driver.findElement(By.id("passwd")).sendKeys("Xcg7299bnSmMuRLp9ITw");
@@ -22,6 +23,7 @@ public class Script1 {
         driver.findElement(By.xpath("//*[@id='employee_infos']/a/span/img")).click();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id='header_logout']")).click();
+
     }
 
     @Test
