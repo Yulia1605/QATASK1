@@ -22,7 +22,6 @@ public class Script1 {
         driver.findElement(By.xpath("//*[@id='employee_infos']/a/span/img")).click();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id='header_logout']")).click();
-
     }
 
     @Test
@@ -38,7 +37,6 @@ public class Script1 {
         driver.findElement(By.id("tab-AdminDashboard")).click();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
       Assert.assertThat(driver.findElement(By.xpath("//*[@id='content']/div[1]/div/ul/li/a")).getText(),containsString(s1));
-
         System.out.println("Page name is correct  "+s1);
 
     }
